@@ -37,6 +37,7 @@ public class DatabaseContentInit implements ApplicationRunner {
       User defaultUser = new User("user", "password");
       defaultUser.setRole(User.Role.ADMIN);
       userStore.saveAndFlush(defaultUser);
+      System.err.println("WARNING: Created default user; login with 'user/password'");
     }
   }
 
